@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web&display=swap'); /* Importando fonte do site google.com/fonts */
+@font-face {
+	font-family: 'FonteLogo'; /*Usando uam fonte propria que ja ésta no computador */
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+		background-color: #dddddd;
+		color: rgba(0,0,0,1);
+		font-family: arial, sans-serif;
+	}
+	div#interface {
+		width: 900px;
+		background-color: #ffffff;
+		margin: -20px auto 0px auto;
+		box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+		padding: 10px; /* Comando para bordas internas! quando todas as bordas internas forem do mesmo tamanho, basta digitar uam unica vez o valor */	
+	}
+p { /* formatação generica */
+		text-align: justify;
+		text-indent:50px;
+}
+a {
+	color: #606060;
+	text-decoration: none;
+}
+a:hover { /* hover é um comando que diz o que acontece quando se passa o mouse no lugar especifico */
+	text-decoration: underline;
+}
+	header#cabecalho img#icone {
+		position: absolute;
+		left: 1050px;
+		top: 70px;
+	}
+	header#cabecalho {
+		border-bottom: 1px 	#606060 solid;
+		height: 150px;
+		background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+	}
+	header#cabecalho h1{
+		font-family: 'FonteLogo', sans-serif;
+		font-size: 30pt;
+		color: #606060;
+		text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+		padding: 0px;
+		margin-bottom: 0px;
+	}
+	header#cabecalho h2{
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 13pt;
+		color: #888888;
+		padding: 0px;
+		margin-top: 0px;
+	}
+ /* Formatação de imagens com legendas */
+ 
+ figure.foto-legenda {
+	 position: relative;
+	 border: 8px solid white;
+	 box-shadow: 1px 1px 4px black;
+ }
+ figure.foto-legenda img {
+		width: 100%;
+		height: 100%;
+ }
+ figure.foto-legenda figcaption {
+	 opacity: 0;
+	 position: absolute;
+	 top: 0px;
+	 background-color: rgba(0,0,0,.4);
+	 color: white;
+	 width: 100%;
+	 height: 100%;
+	 padding: 10px;
+	 box-sizing: border-box;
+	 transition: opacity 1s;
+ }
+ figure.foto-legenda:hover figcaption {
+	 opacity: 1;
+ }
+ /* Formatação do Menu */
+ nav#menu {
+	 display: block;
+ }
+ 
+ nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	left: 550px;
+ }
+ nav#menu li {
+	 display: inline-block;
+	 background-color: #dddddd;
+	 padding: 10px;
+	 margin: 2px;
+	 transition: background-color 1s;
+ }
+ nav#menu li:hover {
+	background-color: #606060;
+ }
+ nav#menu h1 {
+	 display: none;
+ }
+ nav#menu a {
+	color: #000000;
+	text-decoration: none;
+ }
+ nav#menu a:hover {
+	color: #ffffff;
+	text-decoration: underline;	
+ }
+ /* formatando as divisões */
+ 
+ section#corpo {
+	 display: block;
+	 width: 492px;
+	 float: left;
+	 border-right: 1px #606060 solid;
+	 padding-right: 15px;	
+ }
+ article#noticia-principal h2 {
+	 font-size: 12pt;
+	 color: #606060;
+	 background-color:  #dddddd;
+	 padding: 5px 0px 5px 10px; /* padding CIMA DIREITA BAIXO ESQUERDA */
+	 margin: 10px 0px 10px 0px; /* margin CIMA DIREITA BAIXO ESQUERDA */
+ }
+ header#cabecalho-artigo h1{
+	 font-family: 'FonteLogo', sans-serif;
+	 font-size: 20pt;
+	 color: #606060;
+	 margin-bottom: 0px;
+	 margin-top: 0px;
+ }
+ header#cabecalho-artigo h2{
+	 font-size: 13pt;
+	 color: #cecece;
+	 background-color: #ffffff;
+	 margin: 0px;
+ }
+ header#cabecalho-artigo h3{
+	 font-size: 12pt;
+	 color: #606060;
+ }
+ .direita { /* Essa é uma classe generica, então tudo que receber essa classe herdará essa formatação */
+	 text-align: right;
+ }
+ table#tabelaspec{	/* Configurando a tabela! Esta aqui depois de section#corpo por questão de ajuste e identação */
+	 border: 1px solid #606060;
+	 border-spacing: 0px; /* comando para aumentar ou diminuir espaços entre as bordas da tabela */
+	 margin-left: auto; /*Comando para ajustar a tabela na pagina */
+	 margin-right: auto;/*Comando para ajustar a tabela na pagina */
+ }
+ table#tabelaspec td{
+	 border: 1px solid #606060;
+	 padding: 10px;
+	 text-align: center;
+	 vertical-align: middle; /* comando que alinha o texto na tabela, se nao usar nada o padrão é middle */
+ }
+ table#tabelaspec td.ce{ /*classe criada com a finalidade de formatar uma parte especifica da tabela */
+	 color: #ffffff;
+	 background-color: #606060;
+	 vertical-align: top;
+	 font-weight: bold;/* Formata as letras em negrito */
+ }
+ table#tabelaspec td.cd {
+	 background-color: #cecece;
+ }
+ table#tabelaspec caption {
+	 color: #888888;
+	 font-size: 13pt;
+	 font-weight: bolder;
+ }
+ table#tabelaspec caption span {
+	 display: block;
+	 float: right;
+	 color: #000000;
+	 font-size: 9pt;
+	 margin-top: 10px;
+ }
+ aside#lateral {
+	 display: block;
+	 width: 370px;
+	 float: right;
+	 background-color: #dddddd;
+	 padding: 10px;
+	 margin-top: 10px;
+	 box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+ }
+ aside#lateral h1{
+	 font-family: 'FonteLogo', sans-serif;
+	 color: #606060;
+	 font-size: 20pt;
+	 margin-top: 0px;
+ }
+ aside#lateral h2{
+	 background-color: #606060;
+	 font-size: 13pt;
+	 color: #ffffff;
+	 padding: 5px;
+ }
+ footer#rodape {
+	 clear: both; /* Faz com que limpe a a configuração de flutuaçao no rodape e tudo fique ajustado */
+	 border-top: 1px solid #606060;
+	 padding-top: 15px;
+ }
+ footer#rodape p {
+	 text-align: center;
+ }
+ 
+ video#invideo {
+	display: block;
+	width: 370px;
+}
+video#invideo2 {
+	display: block;
+	width: 500px;
+}

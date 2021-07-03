@@ -1,0 +1,24 @@
+<!DOCTYPE htmal>
+
+<html>
+	<head>
+		<title>Teste JavaScript </title>
+		<meta charset="UTF-8"/>
+		<script>
+			function acendeLampada() { <!-- Tudo que está entre parentes são parametros e entre colchetes são codigos -->
+				document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";
+			}
+			function apagaLampada() {
+				document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";
+			}
+			function quebraLampada() {
+				document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Acenda a Lâmpada</h1>
+		<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()	"/> <!-- onclick comando de JS que realiza uma ação ao clicar no local, neste exemplo na imagem -->
+																			<!-- onmousemove comando de JS que realiza uma ação ao passar o cursor sobre o local neste exemplo a imagem -->
+	</body>
+</html>
